@@ -1,2 +1,3 @@
-# array
-Algocpp.Array
+# Algocpp.Array
+
+Array manipulation library in Algo.cpp
