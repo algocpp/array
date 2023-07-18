@@ -15,7 +15,7 @@ namespace algocpp
 	namespace array
 	{
 		template <typename _Tp>
-		inline long long count(std::vector<_Tp> v, _Tp x)
+		inline long long count(std::vector<_Tp> v, _Tp x) noexcept
 		{
 			std::sort(v.begin(), v.end());
 
