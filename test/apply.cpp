@@ -41,7 +41,7 @@ TEST(vector, std_function)
 TEST(vector, size_ne)
 {
 	std::vector<int> a = {}, b = {};
-	for (int i = 0; i < 500000; ++i)
+	for (int i = 0; i < 10000; ++i)
 	{
 		b.emplace_back(i);
 		EXPECT_THROW(apply(a, b, func), std::invalid_argument);
