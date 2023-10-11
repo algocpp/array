@@ -34,8 +34,6 @@ namespace algocpp
 		template <typename T, typename funcs>
 		inline std::vector<T> apply(std::vector<T> a, std::vector<T> b, funcs func)
 		{
-			static_assert(a.size() == b.size(), "Arrays must be of equal length.");
-
 			if (a.size() != b.size())
 			{
 				throw std::invalid_argument("Arrays must be of equal length.");
@@ -88,8 +86,6 @@ namespace algocpp
 		template <typename T, typename funcs>
 		inline std::list<T> apply(std::list<T> a, std::list<T> b, funcs func)
 		{
-			static_assert(a.size() == b.size(), "Arrays must be of equal length.");
-
 			if (a.size() != b.size())
 			{
 				throw std::invalid_argument("Arrays must be of equal length.");
