@@ -8,4 +8,4 @@ include_directories(./algocpp/includes/)
 
 add_executable(apply apply.cpp)
 
-target_link_libraries(* gtest_main gtest)
+target_link_libraries(apply gtest_main gtest)
