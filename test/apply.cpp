@@ -38,6 +38,16 @@ TEST(vector, std_function)
 			  result);
 }
 
+TEST(vector, size_ne)
+{
+	std::vector<int> a = {}, b = {};
+	for (int i = 0; i < 10000; ++i)
+	{
+		b.emplace_back(i);
+		EXPECT_THROW(apply(a, b, func), std::invalid_argument);
+	}
+}
+
 TEST(list, lambda)
 {
 	std::list<int> a = {1, 2, 3}, b = {4, 5, 6};
@@ -62,6 +72,16 @@ TEST(list, std_function)
 	std::function<int(int, int)> f = func;
 	EXPECT_EQ(apply(a, b, f),
 			  result);
+}
+
+TEST(list, size_ne)
+{
+	std::list<int> a = {}, b = {};
+	for (int i = 0; i < 10000; ++i)
+	{
+		b.emplace_back(i);
+		EXPECT_THROW(apply(a, b, func), std::invalid_argument);
+	}
 }
 
 TEST(array, lambda)
